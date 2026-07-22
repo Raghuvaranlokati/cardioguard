@@ -43,6 +43,15 @@ CardioGuard is engineered to train and cross-validate on three gold-standard cli
 | **MIT-BIH Arrhythmia** | 48 half-hour 2-channel ECGs | Continuous raw signals with beat-by-beat annotations | Premature ventricular contractions, atrial fibrillation | Target dataset for individual heartbeat segmentation & classification |
 | **PhysioNet CinC (2020/2021)** | 40,000+ records from global clinics | Heterogeneous multi-lead signals with varying formats | General cardiac abnormalities | Cross-source domain generalizability and noise robustness training |
 
+### 📥 Automating Dataset Downloads
+To make setup fast and simple, we provide a Python utility to automatically download and unpack these databases into the correct local directory structure:
+
+```bash
+# Run the interactive downloader utility
+python models/download_datasets.py
+```
+This utility prompts you to download specific datasets (or all three concurrently), creating directories and cleaning up temporary archives to preserve disk space.
+
 ---
 
 ## 🧬 Model Architecture Specs
